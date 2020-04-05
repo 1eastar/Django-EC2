@@ -16,3 +16,20 @@ processes=2
 socket=/tmp/%(project).sock
 chmod-socket = 666
 vacuum=true
+
+
+STATIC_URL = '/static/'     # 웹 상 url
+STATIC_DIR = os.path.join(BASE_DIR, 'static')       # static 파일들을 찾을 때 쓰는 경로 
+STATICFILES_DIRS = [
+    STATIC_DIR,
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')         # static 파일이 저장될 경로
+
+
+
+
+--------------------------------------------------------------------------------------------------------
+- nginx https 통신
+- elastic IP
+- elastic beanstalk
+- docker
