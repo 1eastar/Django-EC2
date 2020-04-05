@@ -1,0 +1,18 @@
+502 gateway error
+- sudo apt-get install uwsgi-plugin-python (로그 확인 후 플러그인 관련 에러 시)
+
+[uwsgi]
+
+base=/home/ubuntu
+project=practiceProject
+
+chdir=%(base)/djangoEC2
+home=%(base)/djangoEC2/myvenv
+module=%(project).wsgi:application
+
+master=true
+processes=2
+
+socket=/tmp/%(project).sock
+chmod-socket = 666
+vacuum=true
